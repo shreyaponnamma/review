@@ -60,6 +60,7 @@ class Forms extends React.Component {
 
     window.alert(data);
     this.clearForm();
+    this.props.setfalsefunction();
   };
 
   clearForm = () => {

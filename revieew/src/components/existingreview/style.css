@@ -1,0 +1,32 @@
+.review{
+    margin-top: 10px;
+}
+
+.r-cont {
+    padding: 10px;
+    margin-left: 10px;
+    text-align: left;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+.btn-review {
+    margin-top: 100px;
+}
+
+.r-title {
+    font-weight: bold;
+}
+
+.r-review {
+    font-style: italic;
+}
+
+.r-name {
+    font-size: 13px;
+}
+
+.review p {
+    margin-top: 5px;
+}
+

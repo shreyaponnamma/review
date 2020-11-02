@@ -24,6 +24,7 @@ html, body {
 
   .left-column img {
     width: 80%;
+    height: 40%;
     position: absolute;
     left: 0;
     top: 0;
@@ -34,6 +35,27 @@ html, body {
   .left-column img.active {
     opacity: 1;
   }
+
+  .overall  {
+    padding-top: 20px;
+    height: 150px;
+    border:1px solid gray;
+    width: 80%;
+    margin-right:60% ;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 93%;
+    position: relative;
+    border-radius: 5px;
+    
+  }
+
+  .r-num {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 13px;
+  }
+
 
   .product-description {
     margin-top: 20px;
