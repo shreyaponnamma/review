@@ -1,9 +1,8 @@
 import React from "react";
 import "./style.css";
-import $ from "jquery";
 import Forms from "../review/review"
 import Existing from "../existingreview/existing"
-
+import ReactImageZoom from 'react-image-zoom';
 class Button extends React.Component {
     render() {
         return (
@@ -15,18 +14,6 @@ class Button extends React.Component {
 }
 
 class Product extends React.Component {
-    jqueryMethod = () => {
-        $('.color-choose input').on("click", (e) => {
-            var headphonesColor = e.currentTarget.getAttribute('data-image');
-
-            $('.active').removeClass('active');
-            $('.left-column img[data-image = ' + headphonesColor + ']').addClass('active');
-            $(this).addClass('active');
-        });
-    }
-    componentDidMount() {
-        this.jqueryMethod();
-    }
 
     constructor() {
         super();
@@ -50,15 +37,15 @@ class Product extends React.Component {
             clicked:false
         })
     }
+    
     render = () => {
 
-
+        const props = {width:530,height:430,zoomWidth:600,zoomPosition:"right",offset:{"vertical": 30, "horizontal": -55},scale:1.1,img: "https://brain-images-ssl.cdn.dixons.com/3/6/10152163/u_10152163.jpg" };
         return (
             <main className="container">
                 <div className="left-column">
-                    <img data-image="black" src="https://th.bing.com/th/id/OIP.blCIYX3c3Tx6vPXC0xD46wHaGk?w=237&h=210&c=7&o=5&dpr=1.25&pid=1.7" alt="" />
-                    <img data-image="blue" src="https://th.bing.com/th/id/OIP.JCQ73ceygFkNDy9aRJeCBgHaGk?pid=Api&rs=1" alt="" />
-                    <img data-image="red" className="active" src="https://th.bing.com/th/id/OIP.7wwHwLPlnDPErPxFa236fAHaFu?pid=Api&rs=1" alt="" />
+                <ReactImageZoom {...props} />
+                   {/* <img  src="https://th.bing.com/th/id/OIP.7wwHwLPlnDPErPxFa236fAHaFu?pid=Api&rs=1" alt="" />*/}
 
                     <div className="overall">
                         <p>Customer Rating</p>
@@ -91,26 +78,6 @@ class Product extends React.Component {
                     <div className="product-configuration">
                         <p><button className="btn1">ADD TO CART</button></p>
                         <p><button className="btn2">ADD TO WISHLIST</button></p>
-
-                    </div>
-
-                    <div className="product-color">
-                        <span>Color</span>
-
-                        <div className="color-choose">
-                            <div>
-                                <input data-image="red" type="radio" id="red" name="color" value="red" />
-                                <label htmlFor="red"><span></span></label>
-                            </div>
-                            <div>
-                                <input data-image="blue" type="radio" id="blue" name="color" value="blue" />
-                                <label htmlFor="blue"><span></span></label>
-                            </div>
-                            <div>
-                                <input data-image="black" type="radio" id="black" name="color" value="black" />
-                                <label htmlFor="black"><span></span></label>
-                            </div>
-                        </div>
 
                     </div>
 
